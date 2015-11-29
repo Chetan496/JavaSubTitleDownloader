@@ -46,7 +46,6 @@ public class HTTPClient implements AutoCloseable {
 				queryString.append(tmp).append("&");
 			}
 			this.fullUrl = baseUrl.concat("?").concat(queryString.toString());
-			System.out.println(this.fullUrl);
 
 		} catch (UnsupportedEncodingException e) {
 			System.out.println("Error while encoding the request property");

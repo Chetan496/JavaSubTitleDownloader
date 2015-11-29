@@ -4,7 +4,7 @@
 	<groupId>com.chetan.utils</groupId>
 	<artifactId>SubtitleDownloader</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Subtitles Downloader</name>
+	<name>SubtitlesDownloader</name>
 	<description>A Java utility which gets the subtitles using the API exposed by thesubdb.com</description>
 
 	<build>

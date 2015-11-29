@@ -14,7 +14,12 @@ public class Main {
 	public static void main(String[] args) {
 
 		/* We need to get the MovieFile Path from the user. */
-		String filePath = "/home/MAC/Movies/movies/Unbroken.2014/Unbroken.2014.Screener.XviD-SaM[ETRG].avi";
+		if (args.length == 0) {
+			throw new NullPointerException(
+					"Incorrect invocation. Correct Usage: java -jar jarFileName PathToVideoFile");
+		}
+		String filePath = args[0];
+
 		SubDBUtil subUtil = new SubDBUtil();
 		String hash = subUtil.getHash(filePath);
 
@@ -23,6 +28,10 @@ public class Main {
 				.setRequestParam("language", "en")
 				.setRequestParam("action", "download").init();
 
+		/*
+		 * This should happen in a different way. Should use ENums for
+		 * App-specific constants
+		 */
 		client.setUserAgent("Java Client", "1.0",
 				"https://github.com/Chetan496");
 

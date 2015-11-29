@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
 
 /*This class will contain methods which will read first and 
  * last 64bytes from the given filePath.
- * They will then concatenate the data and compute the hash.
+ * They will then concatenate those bytes and compute the hash.
  * and then return it */
 public class SubDBUtil {
 
@@ -18,7 +18,6 @@ public class SubDBUtil {
 	}
 
 	public String getHash(String filePath) {
-
 		byte[] bytesRead = readBytesFromMovie(filePath);
 		return getMD5HashInHex(bytesRead);
 	}
@@ -34,11 +33,11 @@ public class SubDBUtil {
 
 		if (movieFile.isDirectory()) {
 			throw new IllegalArgumentException(
-					"The given filename is a directory");
+					"The given filePath is a directory");
 		}
 
 		if (null == filePath) {
-			throw new IllegalArgumentException("The given filename is empty");
+			throw new IllegalArgumentException("The given filePath is empty");
 		}
 
 		int bufferSize = 64 * 1024;

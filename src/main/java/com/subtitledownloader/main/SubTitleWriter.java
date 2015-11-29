@@ -45,7 +45,7 @@ public class SubTitleWriter {
 			parentDirPath = file.getParent();
 		}
 
-		String subTitleFileName = file.getName().replaceFirst(".[a-z]+$",
+		String subTitleFileName = file.getName().replaceFirst(".[a-z]+[0-9]+$",
 				subTitleExt);
 		Path p1 = Paths.get(parentDirPath);
 		Path p2 = p1.resolve(subTitleFileName);
