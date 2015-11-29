@@ -20,7 +20,7 @@ Java has it's own obvious advantages.
 Since I like movies, and subtitles are a good to have, I decided to write one after I found SubDB.
 
 ### Building this Project
-1. Git clone this repo. Make sure you have [maven](http://apache.maven.org/) installed.
+1. Git clone this repo. Make sure you have [maven](http://maven.apache.org/) installed.
 2. Import into Eclipse. Make sure you have `m2eclipse` plugin.
 3. Right click on project in left navigation and select "Run as". Then Select "maven install"
 4. A jar file ending with `-jar-with-dependencies.jar`  will be generated under the directory `target`.

@@ -33,7 +33,7 @@ public class Main {
 		 * App-specific constants
 		 */
 		client.setUserAgent("Java Client", "1.0",
-				"https://github.com/Chetan496");
+				"https://github.com/Chetan496/JavaSubTitleDownloader");
 
 		/*
 		 * You need to write the subtitle to a file in the same directory as the
