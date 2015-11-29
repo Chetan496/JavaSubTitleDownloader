@@ -89,7 +89,7 @@ public class HTTPClient implements AutoCloseable {
 				inputLine = new StringBuffer();
 				String temp;
 				while ((temp = bufferedReader.readLine()) != null)
-					inputLine.append(temp);
+					inputLine.append(temp).append("\n");
 
 				bufferedReader.close();
 			} else {
@@ -142,6 +142,7 @@ public class HTTPClient implements AutoCloseable {
 
 	}
 
+	@Override
 	public void close() throws Exception {
 		this.conn.disconnect();
 		System.out.println("Connection Closed");

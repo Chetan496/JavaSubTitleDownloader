@@ -13,6 +13,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		/* We need to get the MovieFile Path from the user. */
 		String filePath = "/home/MAC/Movies/movies/Unbroken.2014/Unbroken.2014.Screener.XviD-SaM[ETRG].avi";
 		SubDBUtil subUtil = new SubDBUtil();
 		String hash = subUtil.getHash(filePath);
@@ -25,7 +26,14 @@ public class Main {
 		client.setUserAgent("Java Client", "1.0",
 				"https://github.com/Chetan496");
 
-		System.out.println(client.request());
+		/*
+		 * You need to write the subtitle to a file in the same directory as the
+		 * movie. The name of the file should be same, extension should be .srt
+		 */
+		String response = client.request();
+		SubTitleWriter subTitleWriter = new SubTitleWriter();
+		subTitleWriter.saveSubTitleToFile(filePath, response);
+		System.out.println("Saved the SubTitles to the movie folder");
 
 	}
 

@@ -20,6 +20,10 @@ Since I like movies, and subtitles are a good to have, I decided to write one af
 ### Implementation Details:
 
 
+### Testing Status
+I have tested on Linux but not on Windows.
+
+
 ### License
 MIT
  
